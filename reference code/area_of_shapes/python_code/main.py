@@ -1,49 +1,28 @@
-import shapes
-
-
-def main():
-    choice = 1
-    while choice == 1:
-
-        enter_choice = int(input("Enter the shape number you want to calculate area for\n1. Rectangle\n2. "
-                                 "Triangle\n3. Circle\n4. Square\n"))
-        if enter_choice == 1:
-            my_rectangle = shapes.Rectangle()
-            my_rectangle.set_values()
-            print("Rectangle ")
-            print("Length: ", my_rectangle.get_length())
-            print("Width: ", my_rectangle.get_width())
-            print("Area: ", my_rectangle.get_area())
-            print("Perimeter: ", my_rectangle.get_perimeter())
-
-        elif enter_choice == 2:
-            my_triangle = shapes.Triangle()
-            my_triangle.set_values()
-            print("Triangle")
-            print("Base: ", my_triangle.get_base())
-            print("Height", my_triangle.get_height())
-            print("Area: {my_triangle.get_area():.2f}")
-
-        elif enter_choice == 3:
-            my_circle = shapes.Circle()
-            my_circle.set_values()
-            print("Circle")
-            print("Radius: ", my_circle.get_radius())
-            print(f"Area: {my_circle.get_area():.2f}")
-            print(f"Perimeter:  {my_circle.get_perimeter():.2f}")
-
-        elif enter_choice == 4:
-            my_square = shapes.Square()
-            my_square.set_values()
-            print("Square")
-            print("Side: ", my_square.get_side())
-            print("Area: ", my_square.get_area())
-            print("Perimeter", my_square.get_perimeter())
-
-        else:
-            print("Dear user, Nothing was found!!")
-
-        choice = int(input("Would you like to continue?\n Enter:\n1. To continue\n2. To exit\n"))
-
-
-main()
+import math
+def calculate_circle_area(radius):
+    return math.pi * radius**2
+def calculate_rectangle_area(length, width):
+    return length * width
+def calculate_triangle_area(base, height):
+    return 0.5 * base * height
+print("Choose a shape:")
+print("1. Circle")
+print("2. Rectangle")
+print("3. Triangle")
+choice = int(input("Enter your choice (1/2/3): "))
+if choice == 1:
+    radius = float(input("Enter the radius of the circle: "))
+    area = calculate_circle_area(radius)
+    print(f"The area of the circle is: {area}")
+elif choice == 2:
+    length = float(input("Enter the length of the rectangle: "))
+    width = float(input("Enter the width of the rectangle: "))
+    area = calculate_rectangle_area(length, width)
+    print(f"The area of the rectangle is: {area}")
+elif choice == 3:
+    base = float(input("Enter the base of the triangle: "))
+    height = float(input("Enter the height of the triangle: "))
+    area = calculate_triangle_area(base, height)
+    print(f"The area of the triangle is: {area}")
+else:
+    print("Invalid choice.")
