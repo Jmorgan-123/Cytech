@@ -7,12 +7,12 @@
         This portfolio is a testament to that journey!</p>
     <h2>Table of Contents</h2>
     <ul>
-      <li><a href="#how">What's this?</a></li>
-      <li><a href="link2">How did make this?</a></li>
+      <li><a href="#what">What's this?</a></li>
+      <li><a href="#how">How did make this?</a></li>
       <li><a href ="#references">Code References</a>
         <ul>
-          <li><a href="link4"> Massive gym</a></li>
-          <li><a href="link5"> Mr. Benson Profit Traker</a></li>
+          <li><a href="#gym"> Massive gym</a></li>
+          <li><a href="#benson"> Mr. Benson Profit Traker</a></li>
         </ul>
       </li>
     </ul>
@@ -44,6 +44,7 @@
                     You are able to select the gym plan you want to purchase and also offers a space to hire a gym trainer.</p>
               </ul>
           </li>
+          <div id="benson">
             <li><h4> Python Language</h4>
             <ul><li><a href="https://colab.research.google.com/drive/1awIaWsj151bDURByENUIoGxYKO45n1wo">Mr Benson's Kiosk Profit Tracker App</a></li>
                 <p>During fall semester last year, I developed a practical application called the Benson's Kiosk Management App. 
@@ -79,6 +80,7 @@
                     </li>
                 </ul></li>
                 </ul></li>
+          </div>
             <li><h4>Other Practice</h4>
                 <ul>
                     <p>I have also done other simple practice projects in python, html,css,javascript, and c++. 
