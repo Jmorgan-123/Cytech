@@ -38,11 +38,11 @@
         <p>Here's a glimpse into the projects I've been working on:</p>
         <ul>
           <li><h4>Web Development</h4>
-            <ul><li><a href="https://massivegym.store" target="_blank">Massivegym Website</a></li>
+            <div id="gym"><ul><li><a href="https://massivegym.store" target="_blank">Massivegym Website</a></li>
                 <p>This is my personal website built with HTML and CSS. 
                 It serves as an online gym training services selling platform. 
                     You are able to select the gym plan you want to purchase and also offers a space to hire a gym trainer.</p>
-              </ul>
+              </ul></div>
           </li>
           <div id="benson">
             <li><h4> Python Language</h4>
