@@ -1,84 +1,60 @@
+using System;
 
-#include <stdio.h>
-#include <math.h>
+class Program
+{
+    static double CalculateCircleArea(double radius)
+    {
+        return Math.PI * Math.Pow(radius, 2);
+    }
 
-void triangle();
-void circle();
-void rectangle();
+    static double CalculateRectangleArea(double length, double width)
+    {
+        return length * width;
+    }
 
-int main() {
-    char calculate_area = 'y';
+    static double CalculateTriangleArea(double baseLength, double height)
+    {
+        return 0.5 * baseLength * height;
+    }
 
-    while (calculate_area == 'y') {
-        printf("Select the type of shape you want to calculate area for from the numbers:\n");
-        printf("Numbers:\n 1 - triangle\n 2 - circle\n 3 - rectangle\n");
+    static void Main()
+    {
+        Console.WriteLine("Choose a shape:");
+        Console.WriteLine("1. Circle");
+        Console.WriteLine("2. Rectangle");
+        Console.WriteLine("3. Triangle");
 
-        int choice;
-        printf("Enter the number: ");
-        scanf("%d", &choice);
+        Console.Write("Enter your choice (1/2/3): ");
+        int choice = int.Parse(Console.ReadLine());
 
-        switch (choice) {
-            case 1:
-                triangle();
-                break;
-            case 2:
-                circle();
-                break;
-            case 3:
-                rectangle();
-                break;
-            default:
-                printf("Invalid entry. Select choices from 1 to 3\n");
+        if (choice == 1)
+        {
+            Console.Write("Enter the radius of the circle: ");
+            double radius = double.Parse(Console.ReadLine());
+            double area = CalculateCircleArea(radius);
+            Console.WriteLine($"The area of the circle is: {area}");
         }
-
-        printf("Do you want to calculate area? (y/n): ");
-        scanf(" %c", &calculate_area);
-    }
-
-    return 0;
-}
-
-void triangle() {
-    printf("Calculate the area of the triangle.\n");
-    int h, b;
-    printf("Enter the height: ");
-    scanf("%d", &h);
-    printf("Enter base size: ");
-    scanf("%d", &b);
-
-    if (b <= 0 || h <= 0) {
-        printf("Invalid entry. Values should be greater than 0\n");
-    } else {
-        float area = (1.0 / 2) * b * h;
-        printf("Area of the triangle is: %.2f\n", area);
-    }
-}
-
-void circle() {
-    printf("This program calculates area of a circle\n");
-    int radius;
-    printf("Enter radius of a circle: ");
-    scanf("%d", &radius);
-
-    if (radius <= 0) {
-        printf("Invalid input. Value should be greater than 0\n");
-    } else {
-        float area = M_PI * radius * radius;
-        printf("Total area is: %.4f\n", area);
-    }
-}
-
-void rectangle() {
-    int length, width;
-    printf("Enter the length: ");
-    scanf("%d", &length);
-    printf("Enter the width: ");
-    scanf("%d", &width);
-
-    if (length <= 0 || width <= 0) {
-        printf("Invalid entry. Values should be greater than 0\n");
-    } else {
-        int area = length * width;
-        printf("Total area is: %d\n", area);
+        else if (choice == 2)
+        {
+            Console.Write("Enter the length of the rectangle: ");
+            double length = double.Parse(Console.ReadLine());
+            Console.Write("Enter the width of the rectangle: ");
+            double width = double.Parse(Console.ReadLine());
+            double area = CalculateRectangleArea(length, width);
+            Console.WriteLine($"The area of the rectangle is: {area}");
+        }
+        else if (choice == 3)
+        {
+            Console.Write("Enter the base of the triangle: ");
+            double baseLength = double.Parse(Console.ReadLine());
+            Console.Write("Enter the height of the triangle: ");
+            double height = double.Parse(Console.ReadLine());
+            double area = CalculateTriangleArea(baseLength, height);
+            Console.WriteLine($"The area of the triangle is: {area}");
+        }
+        else
+        {
+            Console.WriteLine("Invalid choice.");
+        }
     }
 }
