@@ -84,7 +84,7 @@
                     <p>I have also done other simple practice projects in python, html,css,javascript, and c++. 
                         These serves the purpose of sharpening my coding skills.
                         Follow the link to find the repository where some of the projects are located
-                    <a href="https://github.com/Cychtech/portfolio/tree/main/area_of_shapes"> here</a></p>
+                    <a href="https://github.com/Cychtech/portfolio/tree/main/reference%20code"> here</a></p>
                 </ul>
             </li>
         </ul>
